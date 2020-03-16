@@ -1,5 +1,6 @@
  # Chaos Toolkit extension for the Gandi platform
-
+ 
+[![Build Status](https://travis-ci.org/chaostoolkit-incubator/chaostoolkit-gandi.svg?branch=master)](https://travis-ci.org/chaostoolkit-incubator/chaostoolkit-gandi)
 [![Python versions](https://img.shields.io/pypi/pyversions/chaostoolkit-gandi.svg)](https://www.python.org/)
 
 
