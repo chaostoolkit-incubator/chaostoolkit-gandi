@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """chaostoolkit-gandi extension builder and installer"""
-
+import os
 import sys
 import io
 
