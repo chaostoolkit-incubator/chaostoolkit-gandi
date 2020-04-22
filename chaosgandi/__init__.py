@@ -8,7 +8,7 @@ from chaoslib.types import Configuration, Secrets
 import requests
 
 __all__ = ["gandi_client", "gandi_url"]
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 GANDI_BASE_URL = "https://api.gandi.net"
 
 
