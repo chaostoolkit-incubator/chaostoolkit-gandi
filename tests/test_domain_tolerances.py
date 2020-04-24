@@ -79,7 +79,7 @@ def test_domains_should_not_expire_in():
         "fqdn_unicode": "example.net"
     }]
 
-    assert domains_should_not_expire_in(domains, '1 day') is None
+    assert domains_should_not_expire_in(domains, '1 day') is True
 
 
 def test_domains_will_expire_next_week_fails():
@@ -108,8 +108,7 @@ def test_domains_will_expire_next_week_fails():
         "fqdn_unicode": "example.net"
     }]
 
-    with pytest.raises(ActivityFailed) as x:
-        domains_should_not_expire_in(domains, '1 month')
+    assert domains_should_not_expire_in(domains, '1 month') is False
 
 
 def test_domains_fails_when_cannot_parse_date():
