@@ -1,4 +1,16 @@
-## [0.1.2][]
+
+# Changelog
+
+## [Unreleased][]
+
+[Unreleased]: https://github.com/chaostoolkit-incubator/chaostoolkit-gandi/compare/0.1.2...HEAD
+
+### Changed
+
+- Switched to GitHub actions
+- Fix pinning of logzero dependency
+
+# [0.1.2][]
 
 [0.1.2]: https://github.com/chaostoolkit-incubator/chaostoolkit-gandi/compare/0.1.1...0.1.2
 
