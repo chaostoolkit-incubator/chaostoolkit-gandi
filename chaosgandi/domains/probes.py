@@ -10,9 +10,12 @@ from chaosgandi import gandi_client, gandi_url
 __all__ = ["list_domains", "list_nameservers"]
 
 
-def list_domains(fqdn_filter: str = None, tld_filter: str = None,
-                 configuration: Configuration = None,
-                 secrets: Secrets = None) -> List[Dict[str, Any]]:
+def list_domains(
+    fqdn_filter: str = None,
+    tld_filter: str = None,
+    configuration: Configuration = None,
+    secrets: Secrets = None,
+) -> List[Dict[str, Any]]:
     """
     List all domains or those matching the given TLD or FQDN filters and
     return the list as-is.
@@ -34,14 +37,16 @@ def list_domains(fqdn_filter: str = None, tld_filter: str = None,
         r = client.get(url)
         if r.status_code > 399:
             raise ActivityFailed(
-                "Failed to list domains from Gandi: {}".format(r.text))
+                "Failed to list domains from Gandi: {}".format(r.text)
+            )
         domains = r.json()
         logger.debug("Gandi domains: {}".format(domains))
         return domains
 
 
-def list_nameservers(domain: str, configuration: Configuration = None,
-                     secrets: Secrets = None) -> List[str]:
+def list_nameservers(
+    domain: str, configuration: Configuration = None, secrets: Secrets = None
+) -> List[str]:
     """
     List nameservers set for this domain and return them as a list of strings.
 
@@ -52,7 +57,8 @@ def list_nameservers(domain: str, configuration: Configuration = None,
         r = client.get(url)
         if r.status_code > 399:
             raise ActivityFailed(
-                "Failed to list nameservers from Gandi: {}".format(r.text))
+                "Failed to list nameservers from Gandi: {}".format(r.text)
+            )
         ns = r.json()
         logger.debug("Gandi nameservers for {}: {}".format(domain, ns))
         return ns
